@@ -10,7 +10,9 @@ import bb.cascades 1.0
  * I tried to create an AppMenu looking similar 
  * to the built-in app menu. there are only two smal
  * cosmetic things different:
- * a) swipe-up doesn't close the Appmenu
+ * a) swipe-up doesn't close the Appmenu. 
+ *    (Reason: I don't want to add onTouch() on every page using custom appmenu
+ *     only to enable swipe-up in seldom cases where appmenu was open))
  * b) on Pages with TitleBar I hide the TitleBar while shoing the Appmenu
  * 
  * Touch and Keyboaurd Devices are supported

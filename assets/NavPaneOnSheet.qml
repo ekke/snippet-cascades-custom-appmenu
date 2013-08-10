@@ -79,7 +79,7 @@ NavigationPane {
                     }
                 } else {
                     if (event.key == 27) { // ESC to go BACK
-                        if(navigationPane.top != navigationPane.firstPage){
+                        if (navigationPane.top != navigationPane.firstPage) {
                             navigationPane.pop()
                         }
                         return
@@ -153,9 +153,6 @@ NavigationPane {
         appMenuContainer.action1Menu.disconnect(onFaqMenu)
     }
     // CLOSE APP MENU
-    function resetAppMenuParent() {
-        navigationPane.attachedObjects.length
-    }
     function closeAppMenu() {
         appMenuActive = false
         disconnectAppmenu()

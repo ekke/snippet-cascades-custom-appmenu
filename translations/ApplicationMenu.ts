@@ -57,12 +57,12 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="72"/>
+        <location filename="../assets/main.qml" line="74"/>
         <source>Open Sheet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="82"/>
+        <location filename="../assets/main.qml" line="84"/>
         <source>only a placeholder
 simulates a complete application</source>
         <translation type="unfinished"></translation>

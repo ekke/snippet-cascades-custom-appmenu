@@ -19,6 +19,7 @@ Page {
             enabled: ! navigationPane.appMenuActive
             background: navigationPane.appMenuActive && ! navigationPane.isDark() ? navigationPane.appMenuActiveColor : Color.Transparent
             opacity: navigationPane.appMenuActive && navigationPane.isDark() ? 0.2 : 1
+            // need this LayoutUpdateHandler and TapHandler
             attachedObjects: [
                 LayoutUpdateHandler {
                     onLayoutFrameChanged: {
@@ -29,11 +30,6 @@ Page {
                     }
                 }
             ]
-            Label {
-                text: "content in navpane\nP A G E 3\non top of sheet"
-                multiline: true
-                textStyle.fontSize: FontSize.XXLarge
-            }
             gestureHandlers: [
                 TapHandler {
                     id: appMenuTapHandler
@@ -44,6 +40,12 @@ Page {
                     }
                 }
             ]
+            // now normal content
+            Label {
+                text: "content in navpane\nP A G E 3\non top of sheet"
+                multiline: true
+                textStyle.fontSize: FontSize.XXLarge
+            }
         } // end content Container
     } // end outer container
     function enableAppMenu() {

@@ -65,6 +65,7 @@ Page {
             enabled: ! navigationPane.appMenuActive
             background: navigationPane.appMenuActive && ! navigationPane.isDark() ? navigationPane.appMenuActiveColor : Color.Transparent
             opacity: navigationPane.appMenuActive && navigationPane.isDark() ? 0.2 : 1
+            // need this LayoutUpdateHandler and TapHandler
             attachedObjects: [
                 LayoutUpdateHandler {
                     onLayoutFrameChanged: {
@@ -75,14 +76,6 @@ Page {
                     }
                 }
             ]
-            Label {
-                text: "This is content from FIRST Page\nNavPane on Sheet\nAppMenu Support:)\n(Swipe Down)"
-                multiline: true
-                textStyle.fontSize: FontSize.XXLarge
-            }
-            Label {
-                text: "something more..."
-            }
             gestureHandlers: [
                 TapHandler {
                     id: appMenuTapHandler
@@ -93,6 +86,15 @@ Page {
                     }
                 }
             ]
+            // now normal content
+            Label {
+                text: "This is content from FIRST Page\nNavPane on Sheet\nAppMenu Support:)\n(Swipe Down)"
+                multiline: true
+                textStyle.fontSize: FontSize.XXLarge
+            }
+            Label {
+                text: "something more..."
+            }
         } // end contentContainer
     } // end outer container
     function enableAppMenu() {
